@@ -1,0 +1,108 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box; 
+   font-family: 'Poppins', sans-serif;
+}
+
+.container{
+   width: 100%;
+   min-height: 100vh;
+   background:linear-gradient(90deg,rgb(178, 231, 252),rgb(118, 250, 199));
+   padding: 10px;   
+}
+
+.to-do-app{
+   width: 100%;
+   max-width: 540px;
+   height: auto;
+   padding: 40px 30px 70px;
+   margin: 100px auto 20px;
+   background: #fff;
+   border-radius: 15px;
+}
+
+.to-do-app h2{
+   display:flex;
+   font-size: 18px;
+   font-weight: 700;
+   margin-bottom: 15px;
+}
+
+.row{
+   display: flex;
+   justify-content:space-between;
+   align-items: center;
+   background: rgb(181, 224, 241);
+   padding-left: 20px;
+   margin-bottom: 25px;
+   border-radius: 25px;
+}
+
+input{
+   flex:1;
+   background: transparent;
+   border: none;
+   outline: none;
+   padding: 5px;
+}
+
+.row button{
+   border: none;
+   width: 78px;
+   outline: none;
+   background: orangered;
+   padding:10px 15px ;
+   color: #fff;
+   border-radius: 25px;
+}
+
+ul li{
+  list-style:none;
+  font-size: 17px;
+  cursor: pointer;
+  padding: 12px 8px 12px 50px ;
+  user-select: none;
+  position: relative;
+}
+
+ul li::before{
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background-image:url(/To-do-list/img/check.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  top: 12px;
+  left: 16px;
+
+ }
+
+ ul li.checked{
+   text-decoration: line-through;
+   color: rgb(31, 31, 31);
+   position: relative;
+ }
+
+ ul li.checked::before{
+   background-image: url(/To-do-list/img/ri--checkbox-circle-line.png);
+   background-color: orangered;
+ }
+
+ ul li span{
+   position: absolute;
+   right: 0;
+   top: 5px;
+   width: 40px;
+   height: 40px;
+   line-height: 40px;
+   font-size: 25px;
+   text-align: center;
+   border-radius: 30px;
+ }
+
+ ul li span:hover{
+   background: rgb(214, 214, 214);
+ }
